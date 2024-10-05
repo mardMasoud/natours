@@ -9,59 +9,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: Lato, "sans-serif";
-  color: #777;
-  line-height: 1.7;
-  box-sizing: border-box;
-  font-weight: 400;
-  padding: 3rem;
-  background-color: #eee; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-position: top;
-  background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  margin-bottom: 6rem;
-  text-transform: uppercase; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    letter-spacing: 3.5rem;
-    font-weight: 400;
-    animation-name: moveinleft;
-    animation-duration: 0.7s;
-    animation-timing-function: ease-out;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 1.8rem;
-    /* animation-fill-mode: backwards; */
-    letter-spacing: 1.7rem;
-    font-weight: 700;
-    animation-name: moveinright;
-    animation-duration: 0.7s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: backwards;
-    animation-delay: 0.5s; }
+  box-sizing: border-box; }
 
 @keyframes moveinleft {
   0% {
@@ -92,6 +40,14 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
+@keyframes moveinbottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 .btn:link, .btn:visited {
   text-decoration: none;
@@ -139,10 +95,56 @@ body {
   animation-delay: 1.2s;
   animation-fill-mode: backwards; }
 
-@keyframes moveinbottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+body {
+  font-family: Lato, "sans-serif";
+  color: #777;
+  line-height: 1.7;
+  font-weight: 400;
+  padding: 3rem;
+  background-color: #eee; }
+
+.heading-primary {
+  color: #fff;
+  margin-bottom: 6rem;
+  text-transform: uppercase; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    font-weight: 400;
+    animation-name: moveinleft;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 1.8rem;
+    /* animation-fill-mode: backwards; */
+    letter-spacing: 1.7rem;
+    font-weight: 700;
+    animation-name: moveinright;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+    animation-delay: 0.5s; }
