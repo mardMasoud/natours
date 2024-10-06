@@ -151,7 +151,18 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: brown;
+  background-color: #eae2e2;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left;
+    background-color: coral; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc(100px-20px); }
