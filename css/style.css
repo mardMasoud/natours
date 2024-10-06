@@ -148,3 +148,10 @@ body {
     animation-timing-function: ease-out;
     animation-fill-mode: backwards;
     animation-delay: 0.5s; }
+
+.row {
+  max-width: 114rem;
+  background-color: brown;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
