@@ -154,7 +154,7 @@ body {
   background-color: #eae2e2;
   margin: 0 auto; }
   .row:not(:last-child) {
-    margin-bottom: 8rem; }
+    margin-bottom: 4rem; }
   .row::after {
     content: "";
     display: table;
@@ -163,6 +163,16 @@ body {
     float: left;
     background-color: coral; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
+      margin-right: 2rem; }
   .row .col-1-of-2 {
-    width: calc(100px-20px); }
+    width: calc((100% - 2rem)/2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 2rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(((100% - 2 * 2rem) / 3)*2 + 2rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 2rem)/4); }
+  .row .col-2-of-4 {
+    width: calc(2 * (100% - 3 * 2rem)/4 + 2rem); }
+  .row .col-3-of-4 {
+    width: calc(((100% - 3 * 2rem)/4) * 3 + 2rem * 2); }
