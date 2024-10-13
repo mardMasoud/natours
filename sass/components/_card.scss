@@ -1,0 +1,22 @@
+.card {
+    perspective: 100rem;
+    position: relative;
+    &__side {
+        height: 50rem;
+        background-color: rgb(255, 0, 217);
+        transition: all 0.8s;
+        font-size: 2rem;
+        color: aliceblue;
+        position: absolute;
+        width: 100%;
+       
+      &--back{
+        background-color: burlywood;
+      }
+    }
+   &:hover &__side{
+  
+      transform: rotateY(180deg);
+
+   }
+}
