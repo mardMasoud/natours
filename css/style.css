@@ -160,20 +160,29 @@ body {
     transform: translateY(-1.5rem) scale(1.03); }
 
 .card {
-  perspective: 100rem;
-  position: relative; }
+  perspective: 150rem;
+  position: relative;
+  height: 50rem; }
   .card__side {
     height: 50rem;
-    background-color: #ff00d9;
-    transition: all 0.8s;
+    transition: all 0.8s ease;
     font-size: 2rem;
     color: aliceblue;
     position: absolute;
-    width: 100%; }
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card__side--front {
+      background-color: #de9d87; }
     .card__side--back {
-      background-color: burlywood; }
-  .card:hover .card__side {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+  .card:hover .card__side--front {
     transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(360deg); }
 
 .header {
   height: 95vh;

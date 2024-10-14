@@ -1,22 +1,40 @@
 .card {
-    perspective: 100rem;
+    perspective: 150rem;
     position: relative;
+    height: 50rem;
     &__side {
         height: 50rem;
-        background-color: rgb(255, 0, 217);
-        transition: all 0.8s;
+        // background-color: rgb(255, 0, 217);
+        transition: all 0.8s ease;
         font-size: 2rem;
         color: aliceblue;
         position: absolute;
         width: 100%;
-       
-      &--back{
-        background-color: burlywood;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
+        &--front {
+          background-color: rgb(222, 157, 135);
+          // transform: rotateY(180deg);
+          // z-index: 99;
       }
+        &--back {
+           transform: rotateY(180deg);
+          
+        &-1{
+        background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark);
+        }
+        }
+       
     }
-   &:hover &__side{
-  
-      transform: rotateY(180deg);
-
-   }
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+        // z-index: 0;
+       
+    }
+    &:hover &__side--back {
+      transform: rotateY(360deg);
+      // z-index: 0;
+      
+  }
 }
