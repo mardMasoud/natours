@@ -1,6 +1,6 @@
 .form {
     &__group {
-      position: relative;
+        position: relative;
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
@@ -22,10 +22,6 @@
             &:invalid {
                 border-color: $color-secondary-dark;
             }
-           & .form__label{
-            top: 100%;
-            z-index: 99;
-           }
         }
     }
 
@@ -33,14 +29,16 @@
         color: $color-grey-dark-2;
     }
     &__label {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-left: 2rem;
-      margin-top: .7rem;
-      display: block;
-      position: absolute;
-      top:0;
-      z-index: -1;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: 0.7rem;
+        display: block;
+        transition: all 0.5s;
     }
-
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
 }
